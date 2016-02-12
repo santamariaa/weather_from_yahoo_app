@@ -1,0 +1,23 @@
+<h1>Weather Condition and Forecast</h1>
+
+<h2>Temperature: <%= @conditions["query"] ["results"] ["channel"] ["item"] ["condition"] ["temp"]  %> F</h2>
+
+
+<h2>5-Day Forecast </h2>
+<% @conditions["query"]["results"]["channel"]["item"]["forecast"].each do |condition| %>
+    <h3> Day: <%= condition["day"] %> </h3>
+    <h3> High: <%= condition["high"] %> </h3>
+    <h3> Low: <%= condition["low"] %> </h3>
+<hr>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
